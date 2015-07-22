@@ -355,7 +355,7 @@ class CyLPConstraint:
 
     def perform(self, opr, left=None, right=None):
         if isinstance(left, (CyLPArray, np.matrix, np.ndarray)):
-            left = CyLPArray(np.squeeze(np.asarray(left)))
+            left = CyLPArray(np.asarray(left))
         if isinstance(right, (CyLPArray, np.matrix, np.ndarray)):
             right = CyLPArray(np.squeeze(np.asarray(right)))
 
